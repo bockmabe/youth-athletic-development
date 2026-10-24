@@ -7,7 +7,8 @@ non-consecutive days.
 **Live:** https://bockmabe.github.io/youth-athletic-development/
 
 - 9 exercises, each with an inline demo video, dose, coaching cues, common errors and a checkbox.
-- Progress is saved on your device only (`localStorage`). No accounts, tracking or backend.
+- Progress is stored locally on your device (`localStorage`). No accounts, backend or site analytics;
+  embedded YouTube players may make third-party requests.
 - Videos load only when you open an exercise, via YouTube's privacy-enhanced (`youtube-nocookie.com`)
   player, with a **Watch on YouTube** link as a fallback.
 
