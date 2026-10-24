@@ -13,13 +13,15 @@ accounts, no runtime dependencies.
   sensitivity-tagged `CAPTURE-CANDIDATE` facts (`skills/project-loop.md`).
 
 ## Status (2026-10-24 — verify against the brain)
-- v1 built, published and deployed. Public site: https://bockmabe.github.io/youth-athletic-development/
-- 65/65 automated browser checks pass locally and on the live HTTPS deployment (`TESTING.md`).
-- **Open:** physical-iPhone playback of the 9 embeds is not yet confirmed by a human (`TESTING.md`).
+- v1 built, published and deployed: https://bockmabe.github.io/youth-athletic-development/
+- Automated checks: 65/65 functional checks pass locally and live. On the live HTTPS page, all 9 embeds
+  return 200 with an HTTPS Referer and reach playback in automated Chromium (`TESTING.md`).
+- **Open:** playback on a physical iPhone Safari is not yet confirmed by a human (`TESTING.md` has a
+  4-step manual check).
 
 ## Open decisions
 - Whether to add a "progression" view later. Current rule: the program in `SPEC.md` is fixed;
-  do not intensify it or add load/speed progressions without Bryce.
+  do not intensify it or add load/speed progressions without the owner.
 
 ## Key files
 - `docs/` — the deployed site (`index.html`, `styles.css`, `app.js`). This is the entire runtime.
@@ -28,11 +30,11 @@ accounts, no runtime dependencies.
 - `tests/browser-checks.js` — dev-only Playwright checks (run via the Playwright MCP); not deployed.
 
 ## How to work here
-- **Remote:** GitHub `bockmabe/youth-athletic-development` (**public**) — an explicit, Bryce-authorized
+- **Remote:** GitHub `bockmabe/youth-athletic-development` (**public**) — an explicit, owner-authorized
   exception to the self-hosted default because it is served by GitHub Pages (branch `main`, folder `/docs`).
 - **Public repo hygiene:** no names, schools, locations, medical records or other identifying family
   details; no secrets, tokens, private prompts or transcripts.
 - `git pull` before, commit + push after. Pushing to `main` redeploys the site.
-- Check with Bryce before any outward change of scope (new audiences, sharing, domains).
+- Check with the owner before any outward change of scope (new audiences, sharing, domains).
 - Changing a video: follow the evidence bar in `VIDEOS.md` (real ID, content matches the exercise,
   `playableInEmbed`, live iframe check, Watch on YouTube fallback). Never invent IDs.
